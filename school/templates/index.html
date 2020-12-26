@@ -28,7 +28,7 @@
 
       <section class="flexslider">
         <ul class="slides">
-          <li style="background-image: url({% static 'img/books.jpg' %});" class="overlay">
+          <li style="background-image: url({% static 'images/books.jpg' %});" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -39,7 +39,7 @@
               </div>
             </div>
           </li>
-          <li style="background-image: url(static/img/schsupplies.jpeg)" class="overlay">
+          <li style="background-image: url(static/images/mathspic.jpg)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -51,7 +51,7 @@
             </div>
             
           </li>
-          <li style="background-image: url(static/img/labstu.jpeg)" class="overlay">
+          <li style="background-image: url(static/images/labstu.jpeg)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -62,7 +62,7 @@
               </div>
             </div>
           </li>
-          <li style="background-image: url(static/img/stationery.jpg)" class="overlay">
+          <li style="background-image: url(static/images/stationery.jpg)" class="overlay">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -94,16 +94,12 @@
                 <div class="probootstrap-text probootstrap-animate">
                   <marquee> <h3>Breaking News !</h3> </marquee>
                   <p><h3>Heading here:</h3>The school will be resuming on the 9th, May 2020</p>
-                  <p><a href="{{ '/news' }}" class="btn btn-primary">Read More</a></p>
+                  <p><a href="{% url 'news' %}" class="btn btn-primary">Read More</a></p>
                 </div>
 
-                <div class="probootstrap-image probootstrap-animate" style="background-image: url(static/img/bluesch.jpeg)">
-<!--                   <a href="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="btn-video popup-vimeo"><i class="icon-play3"></i></a> -->
+                <div class="probootstrap-image probootstrap-animate" style="background-image: url(static/images/bluesch.jpeg)">
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- <div class="probootstrap-image probootstrap-animate" style="background-image: url(static/img/slider_3.jpg)">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div> -->
               </div>
             </div>
           </div>
