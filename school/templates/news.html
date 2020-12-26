@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %} 
+
+
+<section style="background-color: #49D292" class="probootstrap-section probootstrap-section-colored">
+  <div class="container">   
+    <div class="row">
+      <div class="col-md-12 col-sm-6 text-left section-heading probootstrap-animate">
+        <h1 class="mb0">News & Events</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height: 50px"></div>
+<section style="background-color: #ffffff; color:#49D292 " class="probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url()">
+  <div class="container">
+    <div class="col-md-12 text-center section-heading probootstrap-animate">
+        <h2 class="mb0" style="margin-top: 1px;"></h2>
+    </div>
+    <div class="probootstrap-tab-style-1 text-center">
+      <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border text-center">
+        <li class="active"><a data-toggle="tab" href="#featured-news">Featured News</a></li>
+        <li><a data-toggle="tab" href="#upcoming-events">Upcoming Events</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+ 
+<section class="probootstrap-section probootstrap-section">
+  <div class="container">
+    <div class="row" style="margin-top: 25px;">
+      <div class="col-md-12 col-sm-6">
+        <div class="tab-content">
+          <!-- LATEST NEWS SECTION -->
+          <div id="featured-news" class="tab-pane fade in active">
+            <div class="row">
+              <div class="row">
+                <div class="col-md-12 col-sm-6 text-center">
+                  <h3>Latest School News</h3>  
+                </div>
+              </div>
+              {% for news in featured_news %}
+              <div class="clearfix visible-md-block"></div>
+              <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+                <figure class="probootstrap-media"><img src="{{ news.image.url }}" alt="Latest News Pics" class="img-responsive" style="height:250px; width: 100%;"></figure>
+                <div class="probootstrap-text" style="background-color: #49D292; ">
+                  <h3>{{ news.title }}</h3>
+                  <p>{{ news.content }}</p>
+                  <span class="probootstrap-date"><i class="icon-calendar"></i>{{ news.date_created|date:'F d, Y' }}</span>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- EVENTS SECTION -->
+          <div id="upcoming-events" class="tab-pane fade">
+            <div class="row">
+              <div class="row">
+                <div class="col-md-12 col-sm-6 text-center">
+                  <h3>Upcoming Events</h3>  
+                </div>
+              </div>
+              {% for event in upcoming_events %}
+              <a href="{% url 'event-detail' event.id %}" class="probootstrap-featured-news-box">
+              <div class="clearfix visible-md-block"></div>
+              <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+                <figure class="probootstrap-media"><img src="{{ event.image.url }}" alt="Latest News Pics" class="img-responsive" style="height:250px; width: 100%;"></figure>
+                <div class="probootstrap-text" style="background-color: #49D292; ">
+                  <h3>{{ event.event }}</h3>
+                  <p>{{ event.summary }}</p>
+                  <span class="probootstrap-date"><i class="icon-calendar"></i>{{ event.date_created|date:'F d, Y' }}</span>
+                  <!-- <span class="probootstrap-location"><i class="icon-location2"></i>{{ news.location }}</span> -->
+                </div>
+              </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

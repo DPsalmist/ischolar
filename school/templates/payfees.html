@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section style="background-color: #49D292" class="probootstrap-section probootstrap-section-colored">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12 text-left section-heading probootstrap-animate">
+             <h1 class="mb0">Pay Fees</h1>
+           </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="probootstrap-section probootstrap-section-sm" style="border: 0px solid black; color: black">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+
+              <div class="row probootstrap-gutter0">
+
+                <div class="col-md-5 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                	<form action="" method="POST" class="probootstrap-form" style="background-color:transparent;  ">
+                		<fieldset>
+                			<legend style="background-color: #fff;">Payment Form</legend>
+
+                		{% csrf_token %}
+                    {{  form|crispy }}
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Pay">
+                    </div>
+                		</fieldset>
+                  </form>
+                  <div class="form-group">
+                  	<small class="text-muted" style="color: #333">Secured By Paystack</small>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+            	<h3>Check out our Gallery Slide</h3>
+            </div>
+          </div>
+          <!-- END row -->
+
+          <div class="row">
+            {% for gallery in gallery_pics %}
+            <div class="col-md-4 col-sm-6" >
+              <div class="probootstrap-teacher">
+                <figure >
+                  <img src="{{ gallery.image.url }}" style="height: 250px; width: 350px;" alt="gallery" class="img-responsive">
+                </figure>
+                
+              </div>
+            </div>
+            <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> --> 
+            {% endfor %}           
+          </div>
+          
+
+        </div>
+      </section>
+
+  <!-- Pagination -->
+                <div class="pagination" style="border:0px solid blue; margin: auto;">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a class = "btn btn-info mb-4" href="?page=1">&laquo; first</a>
+                            <a class = "btn btn-info mb-4" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        </span>
+
+                        {% if page_obj.has_next %}
+                            <a class = "btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">next</a>
+                            <a class = "btn btn-outline-info mb-4" href="?page={{ page_obj.pagination.num_pages }}">last &raquo;</a>
+                        {% endif %}                        
+                    </span>
+                </div>
+
+{% endblock %}

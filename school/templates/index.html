@@ -1,0 +1,322 @@
+{% extends "base.html" %}
+{% load static %}
+      {% block content %}
+
+      <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="101796247903144">
+      </div>
+
+      <section class="flexslider">
+        <ul class="slides">
+          <li style="background-image: url({% static 'img/books.jpg' %});" class="overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="probootstrap-slider-text text-center">
+                    <h1 class="probootstrap-heading probootstrap-animate">Education is Life</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="background-image: url(static/img/schsupplies.jpeg)" class="overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="probootstrap-slider-text text-center">
+                    <h1 class="probootstrap-heading probootstrap-animate">Your Bright Future is Our Mission</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </li>
+          <li style="background-image: url(static/img/labstu.jpeg)" class="overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="probootstrap-slider-text text-center">
+                    <h1 class="probootstrap-heading probootstrap-animate">Fostering New Generation Children</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="background-image: url(static/img/stationery.jpg)" class="overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="probootstrap-slider-text text-center">
+                    <h1 class="probootstrap-heading probootstrap-animate">Helping Each of Our Students Fulfill their Potential</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      
+      <section style="background-color:  #49D292" class="probootstrap-section probootstrap-section-colored">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate">
+              <h2>Welcome to the School of Excellence</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-flex-block">
+                <div class="probootstrap-text probootstrap-animate">
+                  <marquee> <h3>Breaking News !</h3> </marquee>
+                  <p><h3>Heading here:</h3>The school will be resuming on the 9th, May 2020</p>
+                  <p><a href="{{ '/news' }}" class="btn btn-primary">Read More</a></p>
+                </div>
+
+                <div class="probootstrap-image probootstrap-animate" style="background-image: url(static/img/bluesch.jpeg)">
+<!--                   <a href="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="btn-video popup-vimeo"><i class="icon-play3"></i></a> -->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- <div class="probootstrap-image probootstrap-animate" style="background-image: url(static/img/slider_3.jpg)">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DSwY5TdM_-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="probootstrap-section" id="probootstrap-counter">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-users2"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="100" data-speed="3000" data-refresh-interval="50">1</span>
+                  </span>
+                  <span class="probootstrap-counter-label"> Over Students Enrolled</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-user-tie"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50">1</span>
+                  </span>
+                  <span class="probootstrap-counter-label">Certified Teachers</span>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix visible-sm-block visible-xs-block"></div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-library"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="99" data-speed="5000" data-refresh-interval="50">1</span>%
+                  </span>
+                  <span class="probootstrap-counter-label">Passing to Colleges</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+               
+               <div class="probootstrap-counter-wrap">
+                <div class="probootstrap-icon">
+                  <i class="icon-smile2"></i>
+                </div>
+                <div class="probootstrap-text">
+                  <span class="probootstrap-counter">
+                    <span class="js-counter" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50">1</span>%
+                  </span>
+                  <span class="probootstrap-counter-label">Parents Satisfaction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+        <div class="container">
+          <h2 id="welcomeaddress" style="text-align: center;">Welcome Address</h2>
+          <div class="row">
+            <div class="col-md-12 section-heading probootstrap-animate" style="color: ">
+              <figure>
+                <img src="{% static 'images/auntfolakemi.jpg' %}" alt="Proprietress Picture" style="height:150px; width:150px; border-radius: 50%; float: left; margin-left: 0px">
+              </figure>
+              <p>A very warm and happy welcome to New World -Scholars learning community. <br> 
+              New World I-Scholars is a private co-educational institution for Early Years Foundation Stage (EYFS) and Primary Years. It is an integrated curriculum school (British and Nigerian). Established in 2018, adopting a pupil-centered activity based teaching.</p>
+              <p>New World I-Scholars is clearly a school where the desire to learn is infectious and students of all abilities flourish because everyone works hard to create an enabling learning environment, where everybody is welcome and diversity is celebrated. <br>
+                Everything at New World I-scholars is designed to encourage students and pupils to take an active role in their learning. We don't just teach, we inspire. <br>
+                At New World I-Scholars, learning takes place both in the classroom and outside it. Our co-curricular programme offers a wide range of sporting, cultural and creative activities to suit every taste. In addition to educational visits locally. <br>
+                While the wriiten word will give you a small sense of what a wonderful school New World I-Scholars is, whether you are thinking of joining us or are already a member of the family, it can never convey the whole picture. Therefore, I warmly invite you to visit us and see for yourselves how engaging, confident, balanced and polite our students/pupils are. <br>
+                You are welcome to see us at anytime. We look forward to meeting you.
+              </p>
+            </div>
+          </div>
+          <!-- END row -->
+        </div>
+        <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        // js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        js.src = 
+"https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12"
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="101796247903144"
+  theme_color="#13cf13"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+      </div>
+
+
+      </section>
+
+      
+      <!-- SUBJECTS SECTION -->
+      <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Our Featured Subjects</h2>
+              <p class="lead">Given below are some of the subjects we offer in the EYFS and Primary Section</p>
+            </div>
+          </div> 
+          <div class="row" style='margin: auto;'>
+            {% for subject in subjects %}
+            <div class="col-md-6">
+              <div class="probootstrap-service-2 probootstrap-animate">
+                <div class="image">
+                   <div class="image-bg">
+                    <img src="{{ subject.image.url }}" alt="Subjects Picture">
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>{{ subject.subject_name }}</h3>
+                  <p>{{ subject.summary }}.</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- WHY CHOOSE US -->
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+              <h2>Why Choose New World I-Scholar Academy</h2>
+              <p class="lead">We foster new generational leaders. We are geniuses. Sucess is our aim.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Vocal Training</h3>
+                  <p>We train our scholars on vocals. This is to help them in their transition period if they decide to move on to singing.</p>
+                </div>  
+              </div>
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Dance and Music Club</h3>
+                  <p>We hold dance and music sompetitions to bring the very best from our scholars.</p>
+                </div>
+              </div>
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Arts & Craft</h3>
+                  <p>We are not afraid to get our hands dirty in that we make arts and crafts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Brigade & Parade Club</h3>
+                  <p>We also engage our scholars in parades and match past.</p>
+                </div>  
+              </div>
+              
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Literacy & Debate club</h3>
+                  <p>This is one of the most interesting aspect of the school curriculum as it brings out the creativity of the sstudents.</p>
+                </div>
+              </div>
+              
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon"><i class="icon-checkmark"></i></div>
+                <div class="text">
+                  <h3>Home Mangaement Club</h3>
+                  <p>We also engage the students in making of basic home materials.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- END row -->
+        </div>
+      </section>
+
+    {% endblock %}

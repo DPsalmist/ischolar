@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>  
+<html lang="en">
+  <head>
+      <title> New World I-Scholar &mdash; Fostering New Generation Leaders</title>
+
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NewWorld I-Scholar - Fostering New Generation Leaders">
+    <meta name="keywords" content="newworld i-scholar academy, international schools in nigeria, schools in abuja, best schools in nigeria">
+    <meta name="author" content="SOD Technology, Damilare Samuel">
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+
+    <link rel="icon" href="{% static 'img/newworldischolar.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/styles-merged.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v7.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="101796247903144"
+  theme_color="#13cf13"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+      </div>
+
+
+
+    <div class="probootstrap-search" id="probootstrap-search">
+      <a href="#" class="probootstrap-close js-probootstrap-close"><i class="icon-cross"></i></a>
+      <form action="#">
+        <input type="search" name="s" id="search" placeholder="Search a keyword and hit enter...">
+      </form>
+    </div>
+    
+    <div class="probootstrap-page-wrapper">
+      <!-- Fixed navbar -->
+      
+      <div class="probootstrap-header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+              <span><i class="icon-location2"></i>24, Tundunwada Street, Nassarawa State</span>
+              <span><i class="icon-phone2"></i>+234-8034200978</span>
+              <span><i class="icon-phone2"></i>+234-8136037074</span>
+              <span><i class="icon-mail"></i>info@newworldischolar.com</span>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+              <ul>
+                <li><a href="#https://instagram.com/newworldischolaracademy" a target=”_blank”><i class="icon-instagram2"></i></a></li>
+                  <li><a href="https://web.facebook.com/ischolaracademy/" a target=”_blank” ><i class="icon-facebook"></i></a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=2347035671922&text=Hello"><i class="icon-whatsapp"></i></a></li>
+                  <li><a href="https://youtu.be/DSwY5TdM_-A" a target=”_blank”><i class="icon-youtube"></i></a></li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+          <div class="navbar-header">
+            <div class="btn-more js-btn-more visible-xs">
+              <a href="#"><i class="icon-dots-three-vertical "></i></a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <a href="/" title="New World I-Scholar" style="color: black"><img  style=" top: 24px; position: relative; width: 120px; height: 70px; text-indent: -999999px; -webkit-transition: .2s all; transition: .2s all; padding-top: 0 !important; padding-bottom: 0 !important; margin-bottom: 30px; font-size: 30px; text-transform: uppercase;" src="{% static 'img/newworldischolar.jpg' %}">New World I-Scholar</a>
+          </div>
+
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="{{ '/' }}">Home</a></li>
+              <li><a href="{{ '/about' }}">About Us</a></li>
+              <li><a href="/admission">Admission</a></li>
+              <li><a href="https://paystack.com/pay/i-scholars-academy">Pay Fees</a></li>
+              <li><a href="{{ '/gallery' }}">Gallery</a></li>    
+              <li><a href="{{ '/news' }}">News</a></li>      
+              <li><a href="{{ '/contact' }}">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {% block content %}  {% endblock %}
+
+      <section class="probootstrap-cta" style="background-color:  #49D292;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
+              <a href="{{ '/admission' }}" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft" style="color: #49D292; background: #fff">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="probootstrap-footer probootstrap-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                
+                <h3>Social</h3>
+                <ul class="probootstrap-footer-social">
+                  <li><a href="#https://instagram.com/newworldischolaracademy" a target=”_blank”><i class="icon-instagram2"></i></a></li>
+                  <li><a href="https://web.facebook.com/ischolaracademy/" a target=”_blank” ><i class="icon-facebook"></i></a></li>
+                  <li><a href="https://api.whatsapp.com/send?phone=2348136037074&text=Hello"><i class="icon-whatsapp"></i></a></li>
+                  <li><a href="https://youtu.be/DSwY5TdM_-A" a target=”_blank”><i class="icon-youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-md-push-1">
+              <div class="probootstrap-footer-widget">
+                <h3>Links</h3>
+                <ul>
+                  <li><a href="{% url 'index' %}">Home</a></li>
+                  <li><a href="{% url 'about' %}">About Us</a></li>
+                  <li><a href="{% url 'admission' %}">Admission</a></li>
+                  <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                  <li><a href="{% url 'news' %}">News</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="probootstrap-footer-widget">
+                <h3>Contact Info</h3>
+                <ul class="probootstrap-contact-info">
+                  <li><i class="icon-location2"></i> <span>24, Tundunwada Street, Nassarawa State</span></li>
+                  <li><i class="icon-mail"></i><span>info@newworldischolar.com</span></li>
+                  <li><i class="icon-phone2"></i><span>+234-8034200978, +234-8136037074</span></li>
+                </ul>
+              </div>
+            </div>
+           
+          </div>
+          <!-- END row -->
+          
+        </div>
+
+        <div class="probootstrap-copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 text-left">
+                <p>&copy; 2020 <a href="https://newworldischolar.com/">New World I-Scholar Academy</a>. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://sodtechnology.com/">SodTechnology</a></p>
+              </div>
+              <div class="col-md-4 probootstrap-back-to-top">
+                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- END wrapper -->
+
+    <script src="{% static 'js/scripts.min.js' %}"></script>
+    <script src="{% static 'js/main.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+</html>
