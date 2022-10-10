@@ -15,10 +15,12 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+'''
 # heroku imports
 import django_heroku
 from decouple import config
 import dj_database_url
+'''
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -29,7 +31,7 @@ SECRET_KEY = 'nx)6)-*i7q2p(efjx0sy0s90un@z=p6ff$2$y%lqz87*+mfnw2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['newworldischolar.com', '4dbf-160-119-127-221.ngrok.io', 'localhost']
 
 
 # Application definition
@@ -44,6 +46,15 @@ INSTALLED_APPS = [
     'school',
     'crispy_forms',
 ]
+
+# Mailgun smtp
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT='587'
+EMAIL_HOST = 'smtp-relay.sendinblue.com'
+EMAIL_HOST_USER = 'sdamilare420@gmail.com' 
+EMAIL_HOST_PASSWORD='3y6GngbsIcp2a9rV'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,10 +138,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIR = BASE_DIR / 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
 
 # Configure Django App for Heroku.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 MEDIA_URL = '/images/'
 
