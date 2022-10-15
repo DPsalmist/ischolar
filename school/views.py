@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import ContactForm, PayFeesForm
 from django.core.mail import send_mail, EmailMessage
+from .models import Gallery, Post
 
 # Create your views here.
 def index(request):
@@ -14,10 +15,12 @@ def admission(request):
 	return render(request,'admission.html')
 
 def news(request):
-	return render(request,'news.html')
+	posts = Post.objects.all()
+	return render(request,'news.html', {'posts':posts})
 
 def gallery(request):
-	return render(request,'gallery.html')
+	gallery = Gallery.objects.all()
+	return render(request,'gallery.html', {'gallery':gallery})
 
 def contact(request):
     if request.method == 'POST':
